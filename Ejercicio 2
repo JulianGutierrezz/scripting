@@ -3,9 +3,12 @@ using System;
 public class Program
 {
 	public static void Main()
-		// VOLVIENDOLO A RADIANES
-	{   double a = 33.69*(Math.PI/180);
-	    double t = 3.61;
+		// t = 3.61 A= 33.69
+		// VOLVIENDO a A a RADIANES -----------------------0
+		
+	{   Console.WriteLine("ingrese a , t :");
+		double a = double.Parse(Console.ReadLine())*(Math.PI/180);
+	    double t = double.Parse(Console.ReadLine());
 	 // SEN A = Y/T ASI QUE Y = SEN A * T 
 	 double y = Math.Sin(a)*t;
 	 // Z = RAIZ( T^2 - Y^2)
@@ -19,4 +22,3 @@ public class Program
 	 
 		
 	}
-}
