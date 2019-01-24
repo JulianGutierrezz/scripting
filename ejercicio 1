@@ -1,0 +1,18 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{   double y = 2;
+	    double z = 3;
+	 double t = Math.Sqrt( (z*z) + (y*y));
+	  double w = (z/t); 
+		double c = Math.Asin(w) * (180/Math.PI);
+	  double a = 180 -90 - c;
+	    Console.WriteLine(t);
+		Console.WriteLine(c);
+	 Console.WriteLine(a);
+			
+		
+	}
+}
