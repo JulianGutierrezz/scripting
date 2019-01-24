@@ -1,0 +1,22 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+		// VOLVIENDOLO A RADIANES
+	{   double a = 33.69*(Math.PI/180);
+	    double t = 3.61;
+	 // SEN A = Y/T ASI QUE Y = SEN A * T 
+	 double y = Math.Sin(a)*t;
+	 // Z = RAIZ( T^2 - Y^2)
+	 double z = Math.Sqrt((t*t)-(y*y));
+	 // AQUI LO MULTIPLIQUE PARA QUE REGRESARA A GRADOS
+	 double c = 180 - a*(180/Math.PI) -90;
+	 
+	 Console.WriteLine(y);
+	 Console.WriteLine(z);
+	 Console.WriteLine(c);
+	 
+		
+	}
+}
