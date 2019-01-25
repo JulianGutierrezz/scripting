@@ -1,0 +1,23 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		// c = 56.31 z = 3 
+		Console.WriteLine(" ingrese c , z: ");
+		double c =double.Parse(Console.ReadLine())*(Math.PI/180);
+		double z = double.Parse(Console.ReadLine());
+		// sen c = z/t asi que t = senc*z 
+		double t =  z / Math.Sin(c);
+		// PARA HALLAR EL CATETO SERIA RAIZ( T^2 - Z^2)
+		double y = Math.Sqrt((t*t)-(z*z));
+		
+		// lo multiplico para que regrese a su valor
+		double a = 180 - 90 - (c *(180/Math.PI));
+		
+		Console.WriteLine(t);
+		Console.WriteLine(y);
+		Console.WriteLine(a);
+	}
+}
