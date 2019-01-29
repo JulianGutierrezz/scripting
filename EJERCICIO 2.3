@@ -1,0 +1,22 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{ Console.WriteLine(" ingrese w , d ,  x:");
+		double w = double.Parse(Console.ReadLine()); //5
+	 double d = double.Parse(Console.ReadLine()); // 36.87
+		double x = double.Parse(Console.ReadLine()); //2
+	 //teorema del coseno 
+		double t = Math.Sqrt((x*x)+(w*w)-2*x*w*Math.Cos(d * (Math.PI/180)));
+		double q = t/Math.Sin(d *(Math.PI/180) );
+	 //teorema del seno 
+		double b = Math.Asin(x/ q)* (180/Math.PI);
+		double e = 180-d-b;
+		double c = 180 - e;
+	 // cos c = y/t asi que y = cos c * t
+		double y = t * Math.Cos(c * (Math.PI/180));
+		
+		Console.WriteLine(y);
+	}  
+}
