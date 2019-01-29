@@ -1,0 +1,17 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{ Console.WriteLine("ingrese y,b,d:");
+		double y = double.Parse(Console.ReadLine()); //2
+		double b = double.Parse(Console.ReadLine());  //19.44
+		double d = double.Parse(Console.ReadLine()); //36.87;
+	 double e = 180 - d -b ;
+	 double c = 180 - e;
+	 double z = Math.Tan(c * (Math.PI/180))*y;
+	 
+	 Console.WriteLine(z);
+
+	}
+}
