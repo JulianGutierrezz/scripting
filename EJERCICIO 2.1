@@ -1,0 +1,20 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{ // b =19.44 z =3 y= 2
+		Console.WriteLine(" ingrese b , z , y:");
+		double b = double.Parse(Console.ReadLine());
+		double z = double.Parse(Console.ReadLine());
+		double y =double.Parse(Console.ReadLine());
+			double t = Math.Sqrt((z*z)+(y*y));
+		double c = Math.Asin(z/t)*(180/Math.PI); 
+		double e = 180 - c;
+		double d = 180 - e - b;
+		
+		double x =Math.Sin(b * (Math.PI/180 ))* (t / Math.Sin(d * Math.PI/180));
+		
+		Console.WriteLine(x);
+	}
+}
