@@ -1,0 +1,22 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{ Console.WriteLine(" ingrese w, t , c :");
+		double w = double.Parse(Console.ReadLine());// 5;
+			double t = double.Parse(Console.ReadLine()); //3.61;
+			double c = double.Parse(Console.ReadLine()); // 56.31;
+		double e = 180 - c ;
+	
+	 double f = ( w/(Math.Sin(e * (Math.PI/180))));
+	// ley del seno para despejar d  
+		double d = Math.Asin(t/f) *(180/Math.PI);
+		double b = 180 - d - e;
+	 // ley del seno
+		double x = Math.Sin(b * (Math.PI/180))*f;
+		
+		Console.WriteLine(x);
+
+	}
+}
