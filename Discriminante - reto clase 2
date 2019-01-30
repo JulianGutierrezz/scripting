@@ -1,0 +1,29 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		double a = 3;
+	    double b =4;
+		double c =5;
+		double x1 = 0, x2 = 0;
+		
+		double discriminante = ((b*b)-(4*a*c)); // ((-b)* + (Math.Sqrt((b*b)-(4*a*c))))/(2*a);
+        if (discriminante == 0){
+			x1 = -b/(2*a);
+			Console.WriteLine("la solucion existe y es unica");
+		}
+		else if (discriminante > 0){
+			Console.WriteLine("existen dos soluciones");
+			x1 = ((-b)* + (Math.Sqrt(discriminante)))/(2*a);
+			x2 = ((-b)* - (Math.Sqrt(discriminante)))/(2*a);
+		}
+		else {
+		 
+			Console.WriteLine("no es posible calcular la solucion");
+		}
+		Console.WriteLine(x1);
+		Console.WriteLine(x2);
+	}
+}
