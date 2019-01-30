@@ -1,0 +1,26 @@
+public class Program
+{
+	public static void Main()
+	{
+		    double peso = 75;
+            double altura = 1.73;
+            double IMC = (peso / (altura * altura));
+            if (IMC <= 16)
+            {
+                Console.WriteLine("Esta bajo de peso");
+            }
+            else if (16 <= IMC && IMC <= 24)
+            {
+                Console.WriteLine("tiene peso normal");
+            }
+            else if (25 <= IMC && IMC <= 30)
+            {
+                Console.WriteLine("felicidades , esta gordo");
+            }
+            else {
+                Console.WriteLine("esta obeso");
+            }
+            
+            Console.WriteLine(IMC );
+	}
+}
