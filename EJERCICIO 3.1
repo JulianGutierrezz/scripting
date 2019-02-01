@@ -1,0 +1,21 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{     // El salario mensual esta a 828.116 pesos 
+		  // cuantos salarios mensuales gana usted
+		Console.WriteLine("ingrese la cantidad de salarios, osea  Numerodesmmlv:  ");
+		double Numerodesmmlv =double.Parse(Console.ReadLine());
+		double cuatro = 4;
+		if (Numerodesmmlv < 2){
+		Console.WriteLine("Se le aplica tarifa A");
+		}
+	else if (2 <= Numerodesmmlv && Numerodesmmlv <= cuatro & Numerodesmmlv != cuatro ){
+	    Console.WriteLine("Se le aplica la tarifa B");
+	   }
+	else {
+	    Console.WriteLine("se le aplica la tarifa C");
+	}
+	}
+}
