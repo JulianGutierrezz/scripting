@@ -1,0 +1,42 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		            int a = 3;
+            int b = 69;
+            int blancos = 19;
+            int anulados = 81;
+            int n = 1699;
+            double p = 0.27;
+            int votantes = a + b + blancos + anulados;
+            int mayores = (int)(n * p);
+            int abstencion = mayores - votantes;
+
+            bool f = anulados < 0.3 * (a + b); 
+            bool e = (a + b) > blancos;
+            bool o = abstencion < votantes;
+            if ((f || e) && (abstencion < votantes)) 
+            {
+
+                bool H = a > b;
+                bool F = b > a;
+                if (H)
+                {
+
+                    Console.WriteLine("FELICIDADES GANO A");
+                }
+                else
+                {
+                    Console.WriteLine("FELICIDADES GANO B");
+
+                }
+            }
+            else {
+
+                Console.WriteLine("LAS ELECCIONES SE DEBEN HACER OTRA VEZ");
+            }
+            
+	}
+}
