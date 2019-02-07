@@ -1,0 +1,45 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{        Console.WriteLine("ingrese a , b, blancos , anulados, n , p:");
+		            int a = int.Parse(Console.ReadLine());
+            int b = int.Parse(Console.ReadLine());
+            int blancos = int.Parse(Console.ReadLine());
+            int anulados = int.Parse(Console.ReadLine());
+            int n = int.Parse(Console.ReadLine());
+            double p = double.Parse(Console.ReadLine());
+            int votantes = a + b + blancos + anulados;
+            int mayores = (int)(n * p);
+            int abstencion = mayores - votantes;
+		    int dif = Math.Abs(a - b);
+
+            bool f = votantes < 0.3*n; //el número de votantes es inferior al 30% de la población
+		    bool w = votantes > n; //  Si el total de votos es superior al total de la población
+		    bool e = dif < 0.1*votantes; // la diferencia de votos entre el partido 1 y 2 es menor al 10% de los votos totales
+		    
+            
+            if ((w|| e) && (f)) 
+            {
+               Console.WriteLine("las votaciones deben repetirse JAJA XD");
+            }
+            else {
+
+               
+                bool H = a > b;
+                bool F = b > a;
+                if (H)
+                {
+
+                    Console.WriteLine("FELICIDADES GANO A");
+                }
+                else
+                {
+                    Console.WriteLine("FELICIDADES GANO B");
+
+                }
+            }
+            
+	}
+}
