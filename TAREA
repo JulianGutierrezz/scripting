@@ -1,0 +1,54 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		Random azar = new Random();
+		int carta = 0;
+		int carta1 = 0;
+		int robo = 0;
+		int total =0;
+		 int total2 =0;
+		string respuesta = "s";
+		carta = azar.Next(1, 11);
+		carta1 = azar.Next(1, 11);
+		
+		total =  carta + carta1;
+		Console.WriteLine("pille sus cartas");
+		Console.WriteLine(carta);
+		Console.WriteLine(carta1);
+	    Console.WriteLine("total =" + total );
+		Console.WriteLine("Va a continuar ? (s/n): ");
+		 respuesta = Console.ReadLine();
+		if (respuesta == "s" )
+		{
+		   while (total2 < 22 && respuesta == "s")
+		   {
+		
+		  
+			robo = azar.Next(1,11);
+			Console.WriteLine("Usted robo = " + robo);
+			total2 = total + robo;
+			Console.WriteLine("llevas" + total2);
+			if (total2 > 21){
+			 Console.WriteLine("AJAJAJAJ  volo por = " + total2 );
+				Console.WriteLine("por cierto perdio crack");
+			
+			                 }
+		    else {
+			
+			  total = total + robo;
+				Console.WriteLine("Va a continuar ? (s/n): ");
+				respuesta = Console.ReadLine();
+			                  }
+		                    }
+		             }
+		    Console.WriteLine("se acabo");
+			Console.WriteLine("su puntaje fue" + total2);
+		
+		
+		
+		
+		}
+	}
