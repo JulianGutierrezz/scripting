@@ -1,0 +1,130 @@
+ namespace ConsoleApp3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Random aleatorio = new Random();
+            int dado = 0;
+            int total = 0;
+            int con = 0;
+            int vicon = 0;
+            string continuar = "s";
+
+
+            dado = aleatorio.Next(1, 13);
+            total += dado;
+            Console.WriteLine("su primer dado fue " + dado);
+            Console.WriteLine("total " + total);
+            continuar = Console.ReadLine();
+            if (dado == 10)
+            {
+                con = con + 1;
+            }
+
+            if (continuar == "s")
+            {
+
+                dado = aleatorio.Next(1,13 );
+                total += dado;
+                if (dado == 10)
+                {
+                    con = con + 1;
+                }
+                if (dado != 12 && dado != 10)
+                {
+                    con = 0;
+                }
+                if (dado == 12 && con >= 1 )
+                {
+                    Console.WriteLine("dado " + dado);
+                    Console.WriteLine("total " + total);
+
+                    Console.WriteLine("  gano por suerte");
+                    vicon = vicon + 2;
+
+                   
+                }
+                if (vicon < 2)
+                {
+                    Console.WriteLine("dado " + dado);
+                    Console.WriteLine("total " + total);
+                    Console.WriteLine("le sigue?     ");
+                   continuar =  Console.ReadLine();
+                    if (continuar == "s")
+                    {
+
+                        dado = aleatorio.Next(1, 13);
+                        total += dado;
+                        if (dado == 10)
+                        {
+                            con = con + 1;
+                        }
+                        if (dado != 12 && dado != 10)
+                        {
+                            con = 0;
+                        }
+                        if (dado == 12 && con >= 1)
+                        {
+                            Console.WriteLine("  gano por suerte");
+                            vicon = vicon + 2;
+                        }
+                        if (vicon < 2)
+                        {
+                            Console.WriteLine("dado " + dado);
+                            Console.WriteLine("total " + total);
+                            Console.WriteLine("le sigue?     ");
+                            continuar = Console.ReadLine();
+                        }
+                    }
+                }
+            }
+
+            dado = 2;
+            
+                    while (continuar == "s" && total < 100 && dado % 2 == 0 && vicon < 2 )
+                {
+
+                    dado = aleatorio.Next(1, 11);
+                    Console.WriteLine("dado " + dado);
+                    if (dado == 10)
+                    {
+                        con = con + 1;
+                    }
+                    if (dado != 12 && dado != 10)
+                    {
+                        con = 0;
+                    }
+                    if (dado == 12 && con >= 1)
+                    {
+                        total += dado;
+                        Console.WriteLine("  gano por suerte");
+                        vicon = vicon + 2;
+                    }
+                    if (dado % 2 != 0)
+                    {
+                    total += dado;
+                        Console.WriteLine("jaja perdio");
+                    }
+                    if (total >= 100)
+                    {
+                        Console.WriteLine("gano pa ");
+                        total += dado;
+                    }
+                    if (dado % 2 == 0 && vicon < 2)
+                    {
+                        total += dado;
+                        Console.WriteLine("total " + total);
+                        if (total < 100)
+                        {
+                            Console.WriteLine("le sigue ?   ");
+                            continuar = Console.ReadLine();
+                        }
+                    }
+                }
+                Console.WriteLine("se acabo");
+                Console.WriteLine("total " + total);
+            }
+
+        }
+    }
