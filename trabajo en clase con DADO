@@ -1,0 +1,50 @@
+ class Program
+    {
+        static void Main(string[] args)
+        {
+            Random aleatorio = new Random();
+            int dado = 0, total = 0, vidas = 3, con = 0, cont = 0;
+            while (true) {
+                dado = aleatorio.Next(1, 7);
+                total += dado;
+                Console.WriteLine("su dado " + dado);
+                if (dado == 1){
+
+                    con = con + 1;
+                    if (con > 1) {
+                        total = total - 10;
+                        con = 0;
+                        vidas = vidas - 1;
+                    }
+
+                }
+                if (dado == 6) {
+
+                    cont = cont + 1;
+
+                }
+                else { 
+                    cont = 0;
+                }
+
+                if (cont > 1 && vidas < 3) {
+
+                   cont = 0;
+                   vidas = vidas + 1;   
+
+                }
+
+                if (vidas == 0) {
+                    Console.WriteLine("perdio ");
+                    break;
+                }
+                Console.WriteLine("su total " + total);
+                Console.WriteLine("sus vidas " + vidas );
+                Console.WriteLine("continua  ?? (s o n):");
+                if (Console.ReadLine() != "s") break;
+            }
+            Console.WriteLine("el juego acabo");
+            Console.WriteLine("total " + total);
+        }
+    }
+}
