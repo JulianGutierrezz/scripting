@@ -1,0 +1,34 @@
+namespace ConsoleApp9
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Random aleatorio = new Random();
+            int a = aleatorio.Next(0, 11);
+            int b = aleatorio.Next(0, 11);
+            int suma = a + b;
+            int cont = 0;
+            Console.WriteLine("haga la suma de estos numeros robot"   + a +  "+"  + b);
+            int c = int.Parse(Console.ReadLine());
+            while (c != suma && cont < 2)
+            {
+                Console.WriteLine("no tan rapido robot ");
+                a = aleatorio.Next(0, 11);
+                b = aleatorio.Next(0, 11);
+                suma = a + b;
+                Console.WriteLine("haga la suma de estos numeros robot" + a + "+" + b);
+                c = int.Parse(Console.ReadLine());
+                cont += 1;
+
+            }
+            if (cont >= 2) {
+                Console.WriteLine("largo de aqui");
+            }
+            if (cont <= 1)
+            {
+                Console.WriteLine("puede pasar ");
+            }
+        }
+    }
+}
