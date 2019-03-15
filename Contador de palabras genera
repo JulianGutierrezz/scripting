@@ -1,0 +1,32 @@
+namespace ConsoleApp6
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("escriba la frase ");
+            string frase = Console.ReadLine();
+            frase = frase.ToUpper();
+            Console.WriteLine("que palabra busca ");
+            string palabra = Console.ReadLine();
+            palabra = palabra.ToUpper();
+            int con = 0;
+           
+            for (int i = 0; i < frase.Length - palabra.Length + 1; i++) {
+                string palabraA = "";
+                for (int j = 0; j < palabra.Length; j++) {
+
+                    palabraA += frase[i + j];
+                }
+                Console.WriteLine(palabraA);
+                if (palabraA == palabra) {
+
+                    con++;
+                }
+
+
+            }
+        
+        }
+    }
+}
