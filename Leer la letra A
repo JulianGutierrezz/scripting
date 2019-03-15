@@ -1,0 +1,123 @@
+class Parcial {
+
+    string[] names;
+    double[] data;
+
+    public Parcial(string[] _names, double[] _data) {
+        data = new double[_data.Length];
+        _data.CopyTo(data, 0);
+        names = new string[_names.Length];
+        _names.CopyTo(names, 0);
+    }
+
+
+    public int PrimerPunto() {
+        string[] nombres = new string[names.Length];
+        names.CopyTo(nombres, 0);
+        double[] notas = new double[data.Length];
+        data.CopyTo(notas, 0);
+        int salida = 0 ;
+
+        //--------------------------------------------
+        //- Abajo de esta línea va su código ---------
+ 
+
+
+        //- Arriba de esta línea va su código --------
+
+        return salida;
+    }
+
+    public string[] SegundoPunto() {
+        string[] nombres = new string[names.Length];
+        names.CopyTo(nombres, 0);
+        double[] notas = new double[data.Length];
+        data.CopyTo(notas, 0);
+        string[] salida = new string[5];
+
+        //--------------------------------------------
+        //- Abajo de esta línea va su código ---------
+
+
+
+        //- Arriba de esta línea va su código --------
+
+        return salida;
+    }
+
+    public string[] TercerPunto() {
+        string[] nombres = new string[names.Length];
+        names.CopyTo(nombres, 0);
+        double[] notas = new double[data.Length];
+        data.CopyTo(notas, 0);
+        string[] salida = new string[0];
+
+        //--------------------------------------------
+        //- Abajo de esta línea va su código ---------
+
+
+
+        //- Arriba de esta línea va su código --------
+
+        return salida;
+    }
+
+    public string[] CuartoPunto() {
+        string[] nombres = new string[names.Length];
+        names.CopyTo(nombres, 0);
+        double[] notas = new double[data.Length];
+        data.CopyTo(notas, 0);
+        string[] salida = new string[0];
+       
+        int con2 = 0;
+        //--------------------------------------------
+        //- Abajo de esta línea va su código ---------
+        string nombresE = "Eo";
+        char letra = 'A';
+       
+        for (int i = 0; i < nombres.Length; i++) {
+
+            nombresE = nombres[i];
+           
+            for (int j = 0; j < nombresE.Length; j++) {
+             
+                if (letra == nombresE[j]) {
+
+                    con2 += 1;
+                    break; 
+
+                }
+
+            }
+
+
+        }
+        salida = new string[con2];
+        con2 = 0;
+        for (int i = 0; i < nombres.Length; i++)
+        {
+
+            nombresE = nombres[i];
+
+            for (int j = 0; j < nombresE.Length; j++)
+            {
+
+                if (letra == nombresE[j])
+                {
+                    salida[con2] = nombres[i];
+                    Console.WriteLine(salida[con2]);
+                    con2 += 1;
+                    break;
+                }
+
+            }
+
+
+        }
+       
+
+        //- Arriba de esta línea va su código --------
+
+        return salida;
+    }
+}
