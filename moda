@@ -1,0 +1,88 @@
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Random aleatorio = new Random();
+            int aaaa = 0;
+            double total = 0;
+            int con = 0;
+            int n = 0;
+          
+           
+            double[] moda = new double[0];
+            aaaa = aleatorio.Next(5, 11);
+            double[] are =new double [aaaa];
+            Console.WriteLine("el arreglo tiene " + aaaa + "numeros");
+            for (int i = 0; i < are.Length; i++)
+            {
+                are[i] = aleatorio.Next(1, 11);
+                Console.WriteLine(are[i]);
+                
+            }
+            for (int i = 0; i < are.Length; i++)
+            {
+                total += are[i];
+                
+            }
+            double promedio = total / are.Length;
+            Console.WriteLine("el promedio es " + promedio);
+            
+            Console.WriteLine("la monda esa pero arreglada ");
+            for (int a = 0; a < are.Length; a += 1)
+            {
+
+                for (int i = 0; i < are.Length - 1; i += 1)
+                {
+                    if (are[i] > are[i + 1])
+                    {
+                        double tmp = are[i + 1];
+                        are[i + 1] = are[i];
+                        are[i] = tmp;
+                      
+                    }
+                }
+            }
+
+            for (int i = 0; i < are.Length; i++)
+            {
+                Console.WriteLine(are[i]);
+            }
+            if (aaaa % 2 == 0)
+            {
+                Console.WriteLine("la mediana es ");
+                int b = ((aaaa ) / 2);
+                double c = ((are[b-1] + are[b ]) / 2);
+                Console.WriteLine(c);
+            }
+            else {
+                Console.WriteLine("la mediana es ");
+               int  a = ((aaaa + 1) / 2);
+                Console.WriteLine(are[a - 1]);
+            }
+            for (int i = 0; i < are.Length - 1; i++)
+            {
+                if (are[i] == are[i + 1])
+                {
+
+                    con += 1;
+                }
+            }
+            moda = new double[con];
+            Console.WriteLine("la moda es   ");
+            for (int i = 0; i < are.Length - 1; i++)
+            {
+                if (are[i] == are[i + 1])
+                {
+                    moda[n] = are[i];
+                    Console.WriteLine(moda[n]);
+                    n += 1;
+
+                }
+
+            }
+
+        }
+    }
+}
