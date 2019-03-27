@@ -1,0 +1,13 @@
+int total = 0
+   for (int i = 0; i < edades.Length; i ++) {
+                total += edades[i]; // esto es el arreglo , el que sea pues
+                Console.WriteLine(total);
+            }
+            double promedio = total / edades.Length;
+            total = 0;
+            for (int i = 0; i < edades.Length; i ++) {
+
+                total += (promedio - edades[i]) * (promedio - edades[i]);
+
+            }
+            double desviacion = Math.Sqrt(total /edades.Length);
