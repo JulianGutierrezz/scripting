@@ -9,26 +9,27 @@ namespace ConsoleApp1
             double total = 0;
             int con = 0;
             int n = 0;
-          
+            int otro = 0;
            
+
             double[] moda = new double[0];
-            aaaa = aleatorio.Next(5, 11);
-            double[] are =new double [aaaa];
+            aaaa = aleatorio.Next(10, 20);
+            double[] are = new double[aaaa];
             Console.WriteLine("el arreglo tiene " + aaaa + "numeros");
             for (int i = 0; i < are.Length; i++)
             {
                 are[i] = aleatorio.Next(1, 11);
                 Console.WriteLine(are[i]);
-                
+
             }
             for (int i = 0; i < are.Length; i++)
             {
                 total += are[i];
-                
+
             }
             double promedio = total / are.Length;
             Console.WriteLine("el promedio es " + promedio);
-            
+
             Console.WriteLine("la monda esa pero arreglada ");
             for (int a = 0; a < are.Length; a += 1)
             {
@@ -40,7 +41,7 @@ namespace ConsoleApp1
                         double tmp = are[i + 1];
                         are[i + 1] = are[i];
                         are[i] = tmp;
-                      
+
                     }
                 }
             }
@@ -52,13 +53,14 @@ namespace ConsoleApp1
             if (aaaa % 2 == 0)
             {
                 Console.WriteLine("la mediana es ");
-                int b = ((aaaa ) / 2);
-                double c = ((are[b-1] + are[b ]) / 2);
+                int b = ((aaaa) / 2);
+                double c = ((are[b - 1] + are[b]) / 2);
                 Console.WriteLine(c);
             }
-            else {
+            else
+            {
                 Console.WriteLine("la mediana es ");
-               int  a = ((aaaa + 1) / 2);
+                int a = ((aaaa + 1) / 2);
                 Console.WriteLine(are[a - 1]);
             }
             for (int i = 0; i < are.Length - 1; i++)
@@ -70,16 +72,21 @@ namespace ConsoleApp1
                 }
             }
             moda = new double[con];
+            //--------------------------------MODA
             Console.WriteLine("la moda es   ");
             for (int i = 0; i < are.Length - 1; i++)
             {
-                if (are[i] == are[i + 1])
+                
+                if (are[i] == are[i + 1] && otro < 1)
                 {
-                    moda[n] = are[i];
+                    moda[n] = are[i+1];
                     Console.WriteLine(moda[n]);
                     n += 1;
-
+                    otro += 1;
+                   
                 }
+              
+                else { otro = 0; }
 
             }
 
