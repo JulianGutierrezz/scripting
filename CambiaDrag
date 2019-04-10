@@ -1,0 +1,27 @@
+public class simuladorViento1 : MonoBehaviour
+{
+    // Start is called before the first frame update
+    Rigidbody ono;
+    void Start()
+    {
+        ono = GetComponent<Rigidbody>();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+        if (gameObject.tag == "PLUMA")
+        {
+            ono.drag = 10;
+        }
+        if (gameObject.tag == "LADRILLO")
+        {
+            ono.drag = 0;
+        }
+        if (gameObject.tag == "PAPEL")
+        {
+            ono.drag = 5;
+        }
+    }
+}
