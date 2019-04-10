@@ -1,0 +1,23 @@
+public class Numero3 : MonoBehaviour
+{
+    // Start is called before the first frame update
+    Rigidbody ono;
+    Renderer mren;
+    void Start()
+    {
+        mren = GetComponent<Renderer>();
+        ono = GetComponent<Rigidbody>();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        Color c = new Color(1, 0, 0);
+        if (ono.mass > 5f) {
+            mren.material.color = c;
+
+
+        }
+        
+    }
+}
