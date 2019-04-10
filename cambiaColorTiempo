@@ -1,0 +1,35 @@
+public class Ej2 : MonoBehaviour
+{
+    // Start is called before the first frame update
+    float t = 0;
+    Rigidbody ono;
+    Renderer msi;
+    void Start()
+    {
+        msi = GetComponent<Renderer>();
+        ono = GetComponent<Rigidbody>();
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        Color c = (Color.red);
+        Color d = (Color.blue);
+        Color e = (Color.red + Color.blue);
+        t += Time.deltaTime;
+
+        if (t < 3 && t > 0) {
+            msi.material.color = c; 
+        }
+        if (t > 3 && t < 6)
+        {
+            msi.material.color = d;
+        }
+        if (t > 6)
+        {
+            msi.material.color = e;
+        }
+
+    }
+}
